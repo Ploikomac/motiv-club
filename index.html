@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motiv' Club | Prestige Fitness & Wellness</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        :root { --primary-blue: #0A1D56; --accent-blue: #3B82F6; --white: #FFFFFF; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--primary-blue); color: var(--white); overflow-x: hidden; }
+        .glass-nav { background: rgba(10, 29, 86, 0.9); backdrop-filter: blur(15px); border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+        .hero-overlay { background: linear-gradient(to bottom, rgba(10, 29, 86, 0.6), rgba(10, 29, 86, 1)); }
+        .glass-card { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+        .glass-card:hover { border-color: rgba(59, 130, 246, 0.5); transform: translateY(-5px); background: rgba(255, 255, 255, 0.08); }
+        .btn-pill { border-radius: 9999px; transition: all 0.3s ease; }
+        .active-tab { background-color: var(--white) !important; color: var(--primary-blue) !important; border-color: var(--white) !important; }
+        .pulse-white { animation: pulse-white-effect 2s infinite; }
+        @keyframes pulse-white-effect {
+            0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4); }
+            70% { box-shadow: 0 0 0 15px rgba(255, 255, 255, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
+        }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body>
+
+    <nav class="fixed w-full z-50 glass-nav">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-xl md:text-2xl font-black tracking-tighter text-white uppercase italic">MOTIV' CLUB</div>
+            
+            <div class="hidden md:flex space-x-8 font-bold text-xs uppercase tracking-widest items-center">
+                <a href="#hero" class="hover:text-blue-400 transition">Accueil</a>
+                <a href="#services" class="hover:text-blue-400 transition">Univers</a>
+                <a href="#planning" class="hover:text-blue-400 transition">Planning</a>
+                <a href="#mosnack" class="hover:text-blue-400 transition">Mo'Snack</a>
+                <a href="#contact" class="bg-white text-[#0A1D56] px-6 py-2 btn-pill font-black hover:bg-blue-100 transition shadow-lg">Rejoindre</a>
+            </div>
+
+            <button class="md:hidden text-white" onclick="toggleMenu()">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-[#0A1D56] border-t border-white/10 px-6 py-8 flex flex-col space-y-4 font-bold uppercase text-sm fixed w-full z-40">
+            <a href="#hero" onclick="toggleMenu()">Accueil</a>
+            <a href="#services" onclick="toggleMenu()">Services</a>
+            <a href="#planning" onclick="toggleMenu()">Planning</a>
+            <a href="#mosnack" onclick="toggleMenu()">Mo'Snack</a>
+            <a href="#contact" onclick="toggleMenu()" class="text-blue-400 italic">Rejoindre</a>
+        </div>
+    </nav>
+
+    <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0 bg-fixed bg-cover bg-center" 
+             style="background-image: url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80');">
+            <div class="absolute inset-0 hero-overlay"></div>
+        </div>
+
+        <div class="relative z-10 text-center px-6" data-aos="zoom-out" data-aos-duration="1500">
+            <h1 class="text-5xl md:text-9xl font-black mb-8 tracking-tighter leading-[0.9] uppercase italic text-white">
+                DÉPASSER <br> <span class="text-blue-400">TES LIMITES</span>
+            </h1>
+            <p class="text-blue-50 max-w-2xl mx-auto mb-12 text-sm md:text-2xl font-light">
+                L'expérience fitness premium : Entraînement de pointe et nutrition saine.
+            </p>
+            <a href="#services" class="btn-pill bg-white text-[#0A1D56] px-8 py-4 md:px-10 md:py-5 font-black uppercase tracking-widest pulse-white inline-block hover:scale-105 transition shadow-2xl text-xs md:text-base">
+                Explorer le club
+            </a>
+        </div>
+    </section>
+
+    <section id="services" class="max-w-7xl mx-auto px-6 py-20 md:py-32">
+        <div class="mb-12" data-aos="fade-right">
+            <h2 class="text-3xl md:text-4xl font-black uppercase italic leading-none">Nos <span class="text-blue-400">Univers</span></h2>
+            <div class="h-1 w-20 bg-white mt-4"></div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-4 md:gap-6 h-auto md:h-[650px]">
+            
+            <a href="fitness.html" class="glass-card min-h-[300px] md:col-span-2 md:row-span-2 rounded-[2.5rem] p-8 md:p-10 group overflow-hidden relative block" data-aos="fade-up">
+                <img src="images/musculation1.JPG" class="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:scale-110 group-hover:opacity-50 transition duration-700">
+                <div class="absolute inset-0 bg-blue-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+                    <i data-lucide="plus" class="text-white w-12 h-12"></i>
+                </div>
+                <div class="relative h-full flex flex-col justify-end">
+                    <span class="text-blue-400 font-bold uppercase text-xs tracking-[0.3em] mb-2">Performance</span>
+                    <h3 class="text-3xl md:text-5xl font-black uppercase italic">Musculation</h3>
+                </div>
+            </a>
+
+            <a href="aquatique.html" class="glass-card min-h-[250px] md:col-span-2 md:row-span-1 rounded-[2.5rem] p-8 group overflow-hidden relative block" data-aos="fade-up" data-aos-delay="100">
+                <img src="https://images.unsplash.com/photo-1519315901367-f34ff9154487?auto=format&fit=crop&q=80" class="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:scale-110 transition duration-700">
+                <div class="absolute inset-0 bg-blue-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+                    <i data-lucide="plus" class="text-white w-10 h-10"></i>
+                </div>
+                <div class="relative h-full flex flex-col justify-end text-right">
+                    <h3 class="text-2xl md:text-3xl font-black uppercase italic text-white">Aquatique</h3>
+                </div>
+            </a>
+
+            <a href="spa.html" class="glass-card min-h-[200px] md:col-span-1 md:row-span-1 rounded-[2.5rem] p-8 group relative overflow-hidden block" data-aos="fade-up" data-aos-delay="200">
+                <img src="images/spa.jpg" class="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:scale-110 transition duration-700">
+                <h3 class="relative text-xl font-black uppercase italic mt-auto">Spa</h3>
+            </a>
+
+            <a href="kids.html" class="glass-card min-h-[200px] md:col-span-1 md:row-span-1 rounded-[2.5rem] p-8 group relative overflow-hidden flex items-center justify-center text-center block" data-aos="fade-up" data-aos-delay="300">
+                <img src="images/kids.jpg" class="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:scale-110 transition duration-700 z-0">
+                <div class="relative z-10">
+                     <i data-lucide="heart" class="mx-auto mb-2 text-blue-400"></i>
+                    <h3 class="text-xl font-black uppercase italic">Kids Club</h3>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <section id="planning" class="bg-[#081642] py-20 md:py-32">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-down">
+                <h2 class="text-4xl md:text-5xl font-black uppercase italic mb-4">Planning <span class="text-blue-400">Sessions</span></h2>
+                <div class="h-1 w-24 bg-white mx-auto"></div>
+            </div>
+
+            <div class="flex justify-center mb-12 space-x-3 overflow-x-auto no-scrollbar pb-4" data-aos="fade-up">
+                <button onclick="switchTab('fitness')" id="btn-fitness" class="tab-btn px-8 py-3 btn-pill border border-white/20 font-bold active-tab whitespace-nowrap">Fitness</button>
+                <button onclick="switchTab('aquatique')" id="btn-aquatique" class="tab-btn px-8 py-3 btn-pill border border-white/20 font-bold whitespace-nowrap">Aquatique</button>
+                <button onclick="switchTab('kids')" id="btn-kids" class="tab-btn px-8 py-3 btn-pill border border-white/20 font-bold whitespace-nowrap">Kids</button>
+            </div>
+
+            <div id="tab-content" class="grid grid-cols-1 md:grid-cols-2 gap-6 transition-all duration-500"></div>
+        </div>
+    </section>
+
+    <section id="mosnack" class="py-20 md:py-32 bg-[#0A1D56]">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-20 items-center">
+            <div class="relative group" data-aos="fade-right">
+                <div class="absolute -top-4 -left-4 bg-white text-[#0A1D56] px-8 py-3 font-black uppercase text-xs z-10 shadow-xl italic">Bio & Frais</div>
+                <div class="rounded-[3rem] overflow-hidden border border-white/10 shadow-2xl">
+                    <img src="images/snack.JPG" class="w-full h-[300px] md:h-[500px] object-cover opacity-70 group-hover:scale-105 transition duration-700">
+                </div>
+            </div>
+            <div data-aos="fade-left">
+                <h2 class="text-4xl md:text-5xl font-black uppercase italic mb-8">Mo' <span class="text-blue-400">Snack</span></h2>
+                <div class="space-y-12">
+                    <div class="border-l-2 border-blue-400 pl-6 group">
+                        <h4 class="text-white font-black uppercase text-xl mb-4 group-hover:text-blue-400 transition">Smoothies Protéinés</h4>
+                        <div class="flex justify-between mb-3"><span class="text-blue-100/70">Berry Recovery</span><span class="font-bold"></span></div>
+                        <div class="flex justify-between"><span class="text-blue-100/70">Green Detox</span><span class="font-bold"></span></div>
+                    </div>
+                    <div class="border-l-2 border-blue-400 pl-6 group">
+                        <h4 class="text-white font-black uppercase text-xl mb-4">Healthy Bowls</h4>
+                        <div class="flex justify-between"><span class="text-blue-100/70">Acaï Premium Bowl</span><span class="font-bold"></span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="py-12 md:py-24 border-t border-white/5 bg-[#081642]">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16">
+            <div>
+                <h3 class="text-3xl font-black italic mb-6">MOTIV' CLUB</h3>
+                <p class="text-blue-200/50 leading-relaxed italic">Le temple de la performance physique et mentale.</p>
+                <div class="flex space-x-6 mt-8">
+                    <a href="https://www.instagram.com/motiv_club_fitness/" target="_blank">
+                        <i data-lucide="instagram" class="hover:text-blue-400 cursor-pointer transition"></i>
+                    </a>    
+                    <a href="https://www.tiktok.com/@motivclubmeknes" target="_blank">
+                         <i class="fa-brands fa-tiktok hover:text-blue-400 cursor-pointer transition"></i>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-bold uppercase mb-8 text-blue-400 tracking-widest text-sm text-white">Contact</h4>
+                <p class="flex items-center gap-3 mb-4 text-blue-100/70"><i data-lucide="map-pin" class="w-4"></i> 1841, Avenue des FAR - Meknès</p>
+                <a href="tel:0535 521 528" class="bg-blue-600 text-white px-8 py-4 btn-pill inline-flex items-center font-black text-xs tracking-widest shadow-lg">
+                    <i data-lucide="message-circle" class="mr-2 w-4"></i> Numero de téléphone
+                </a>
+            </div>
+            <div class="rounded-3xl bg-white/5 border border-white/10 overflow-hidden opacity-80 hover:opacity-100 transition duration-300 h-[300px] w-full">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3311.5402958144577!2d-5.5019279!3d33.901491400000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda0444a2d48bfff%3A0x526ec05f3f751409!2zTW90aXbigJkgQ2x1Yg!5e0!3m2!1sfr!2sma!4v1767648100349!5m2!1sfr!2sma" 
+                    class="w-full h-full" 
+                     style="border:0;" 
+                     allowfullscreen="" 
+                     loading="lazy" 
+                     referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        lucide.createIcons();
+        AOS.init({ duration: 1000, once: true });
+
+        function toggleMenu() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        }
+
+        const scheduleData = {
+            fitness: [{ time: "08:00", act: "Cross Training", coach: "Thomas", day: "LUN" }, { time: "18:30", act: "HIIT", coach: "Marc", day: "MER" }],
+            aquatique: [{ time: "09:30", act: "Aquabike", coach: "Elena", day: "MER" }, { time: "11:00", act: "Natation", coach: "Staff", day: "SAM" }],
+            kids: [{ time: "14:00", act: "Baby Gym", coach: "Julie", day: "MER" }]
+        };
+
+        function switchTab(cat) {
+            const container = document.getElementById('tab-content');
+            const btns = document.querySelectorAll('.tab-btn');
+            btns.forEach(b => b.classList.remove('active-tab'));
+            document.getElementById(`btn-${cat}`).classList.add('active-tab');
+
+            container.style.opacity = '0';
+            setTimeout(() => {
+                let html = '';
+                scheduleData[cat].forEach(item => {
+                    html += `
+                    <div class="glass-card p-8 rounded-[2rem] flex justify-between items-center group">
+                        <div>
+                            <span class="text-blue-400 font-black text-2xl italic block mb-1">${item.time}</span>
+                            <h4 class="text-lg font-black uppercase italic leading-none">${item.act}</h4>
+                            <p class="text-[10px] text-white/30 font-bold uppercase tracking-widest mt-2 italic">Coach: ${item.coach}</p>
+                        </div>
+                        <span class="text-[10px] border border-white/20 px-3 py-1 rounded-full font-bold group-hover:border-blue-400 transition">${item.day}</span>
+                    </div>`;
+                });
+                container.innerHTML = html;
+                container.style.opacity = '1';
+            }, 300);
+        }
+
+        window.onload = () => switchTab('fitness');
+    </script>
+</body>
+</html>
