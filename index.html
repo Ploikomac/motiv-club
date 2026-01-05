@@ -14,7 +14,7 @@
     <style>
         :root { --primary-blue: #0A1D56; --accent-blue: #3B82F6; --white: #FFFFFF; }
         
-        /* CORRECTION SCROLL HORIZONTAL : On force la largeur max à 100% de la vue */
+        /* CORRECTION SCROLL HORIZONTAL */
         html, body { 
             font-family: 'Inter', sans-serif; 
             background-color: var(--primary-blue); 
@@ -98,7 +98,6 @@
         </div>
         
         <div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-4 md:gap-6 h-auto md:h-[650px]">
-            
             <a href="fitness.html" class="glass-card min-h-[300px] md:col-span-2 md:row-span-2 rounded-[2.5rem] p-8 md:p-10 group overflow-hidden relative block" data-aos="fade-up">
                 <img src="images/musculation1.JPG" class="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:scale-110 group-hover:opacity-50 transition duration-700">
                 <div class="absolute inset-0 bg-blue-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
@@ -109,7 +108,6 @@
                     <h3 class="text-3xl md:text-5xl font-black uppercase italic">Musculation</h3>
                 </div>
             </a>
-
             <a href="aquatique.html" class="glass-card min-h-[250px] md:col-span-2 md:row-span-1 rounded-[2.5rem] p-8 group overflow-hidden relative block" data-aos="fade-up" data-aos-delay="100">
                 <img src="https://images.unsplash.com/photo-1519315901367-f34ff9154487?auto=format&fit=crop&q=80" class="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:scale-110 transition duration-700">
                 <div class="absolute inset-0 bg-blue-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
@@ -119,12 +117,10 @@
                     <h3 class="text-2xl md:text-3xl font-black uppercase italic text-white">Aquatique</h3>
                 </div>
             </a>
-
             <a href="spa.html" class="glass-card min-h-[200px] md:col-span-1 md:row-span-1 rounded-[2.5rem] p-8 group relative overflow-hidden block" data-aos="fade-up" data-aos-delay="200">
                 <img src="images/spa.jpg" class="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:scale-110 transition duration-700">
                 <h3 class="relative text-xl font-black uppercase italic mt-auto">Spa</h3>
             </a>
-
             <a href="kids.html" class="glass-card min-h-[200px] md:col-span-1 md:row-span-1 rounded-[2.5rem] p-8 group relative overflow-hidden flex items-center justify-center text-center block" data-aos="fade-up" data-aos-delay="300">
                 <img src="images/kids.jpg" class="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:scale-110 transition duration-700 z-0">
                 <div class="relative z-10">
@@ -142,7 +138,7 @@
                 <div class="h-1 w-24 bg-white mx-auto"></div>
             </div>
 
-            <div class="flex justify-center mb-12 space-x-3 overflow-x-auto no-scrollbar pb-4" data-aos="fade-up">
+            <div class="flex justify-start md:justify-center mb-12 space-x-3 overflow-x-auto no-scrollbar pb-4 px-6" data-aos="fade-up">
                 <button onclick="switchTab('fitness')" id="btn-fitness" class="tab-btn px-8 py-3 btn-pill border border-white/20 font-bold active-tab whitespace-nowrap">Fitness</button>
                 <button onclick="switchTab('aquatique')" id="btn-aquatique" class="tab-btn px-8 py-3 btn-pill border border-white/20 font-bold whitespace-nowrap">Aquatique</button>
                 <button onclick="switchTab('kids')" id="btn-kids" class="tab-btn px-8 py-3 btn-pill border border-white/20 font-bold whitespace-nowrap">Kids</button>
